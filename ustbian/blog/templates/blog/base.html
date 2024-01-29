@@ -47,18 +47,19 @@
 
 <nav>
     <div>
-        <a href="#">Home</a>
-        <a href="#">About</a>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
         <a href="#">Contact</a>
 
         <div class="right-side">
-            <!-- {% if user.is_authenticated %} -->
-                <a href="#">Logout</a>
-                <a href="#">Profile</a>
-            <!-- {% else %} -->
-                <a href="#">Login</a>
-                <a href="#">Sign Up</a>
-            <!-- {% endif %} -->
+            {% if user.is_authenticated %}
+                <a href="{% url 'profile' %}">Profile</a>
+                <a href="{% url 'logout' %}">Logout</a>
+                
+            {% else %}
+                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'register' %}">Sign Up</a>
+            {% endif %}
         </div>
     </div>
 </nav>
