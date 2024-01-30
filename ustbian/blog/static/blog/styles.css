@@ -1,0 +1,7 @@
+.top{
+    display: flex;
+}
+
+.top img{
+    width: 120px;
+}
