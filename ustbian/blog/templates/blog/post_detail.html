@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+
+        <div class="post">
+            <div class="top">
+                <img src="{{ object.author.profile.image.url }}" alt="">
+                <h1>{{ object.title }}</h1>
+            </div>
+            <p>Author: {{ object.author.username }}</p>
+            <p>{{ object.content }}</p>
+            <p>Created at: {{ object.created_at }}</p>
+        </div>
+
+
+{% endblock %}

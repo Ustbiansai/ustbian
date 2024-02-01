@@ -6,7 +6,7 @@
         <div class="post">
             <div class="top">
                 <img src="{{ post.author.profile.image.url }}" alt="">
-                <h3>{{ post.title }}</h3>
+                <h3><a href="{% url 'detail' post.id %}">{{ post.title }}</a></h3>
             </div>
             <p>Author: {{ post.author.username }}</p>
             <p>{{ post.content }}</p>
